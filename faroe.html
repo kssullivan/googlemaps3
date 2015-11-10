@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Worship</title>
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+  <meta charset="utf-8">
+  <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+  <script src="http://cooper-union-maps-proxy.herokuapp.com/js/draw.js"></script>
+  <script>
+
+    $(document).ready(function(){
+
+      var mapOptions = {
+        zoom: 10,
+        center: new google.maps.LatLng(62.169377,-6.8980787) //faroe islands
+      };
+
+
+      // //set up the google map
+      // var map;
+      //
+      // //create a function that runs when the page is ready
+      // var initialize = function() {
+      //   //set some default options
+      //   var mapOptions = {
+      //     zoom: 10, //medium
+      //     center: new google.maps.LatLng(62.169377,-6.8980787) //faroe islands
+      //   };
+      //
+      //   //create a new map, and have it populate the #map-canvas html element
+      //   var map = new google.maps.Map(document.getElementById('map-canvas'),
+      //       mapOptions);
+
+var positions = [
+{
+"map": new google.maps.LatLng(62.1040605,-7.6435695),
+"title": "Church of Mykines"
+},
+
+{
+"map": new google.maps.LatLng(62.110600, -7.438320),
+"title": "Gerðisvegur"
+},
+
+{
+"map": new google.maps.LatLng(62.0541405,-7.151803),
+"title": "Sandavágs kirkja"
+},
+
+{
+"map": new google.maps.LatLng(62.0333534,-6.7675595),
+"title": "Samkoman Immanuel"
+},
+
+{
+"map": new google.maps.LatLng(62.1214369,-6.722865),
+"title": "Glyvra missiónshús"
+},
+
+{
+"map": new google.maps.LatLng(62.2962403,-7.015026),
+"title": "Slættaratindur"
+// "html": '<img src= http://static.panoramio.com/photos/medium/71580131.jpg/>'
+},
+
+{
+"map": new google.maps.LatLng(62.225557,-6.5880631),
+"title": "Christianskirkjan"
+// "link":
+}
+];
+
+
+// var things = [thing1, thing2, thing3, thing4, thing5, thing6, thing7];
+
+draw("map", mapOptions, positions);
+});
+
+
+
+
+// for (var i=0; i<things.length; i++) {
+//         new google.maps.Marker(things[i]);
+// }
+
+
+
+      // //add the map to the page, when the page is ready
+      // google.maps.event.addDomListener(window, 'load', initialize);
+
+
+
+      </script>
+              <style>
+            #map {
+              height:800px;
+              width:800px;
+            }
+
+
+
+          </style>
+        </head>
+  <body>
+    <div id="map"></div>
+  </body>
+</html>
